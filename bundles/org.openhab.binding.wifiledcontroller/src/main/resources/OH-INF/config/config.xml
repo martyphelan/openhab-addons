@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config-description:config-descriptions
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:config-description="https://openhab.org/schemas/config-description/v1.0.0"
+	xsi:schemaLocation="https://openhab.org/schemas/config-description/v1.0.0 https://openhab.org/schemas/config-description-1.0.0.xsd">
+
+	<config-description uri="thing-type:wifiledcontroller:config">
+		<parameter name="hostAddress" type="text" required="true">
+			<label>Host Address</label>
+			<context>network-address</context>
+			<description>The hostname or IP address of the device</description>
+		</parameter>
+		<parameter name="macAddress" type="text">
+			<label>MAC Address</label>
+            <context>network-address</context>
+			<description>MAC address of the device.</description>
+		</parameter>
+		<parameter name="presets" type="text" required="true">
+			<label>Preset Colors</label>
+            <default>{}</default>
+			<description>Preset color settings for the device.</description>
+		</parameter>
+        <parameter name="presetNames" type="text" required="true">
+            <label>Preset Names</label>
+            <default></default>
+            <description>Comma separated list of unique names for preset color settings for the device.</description>
+        </parameter>
+        <parameter name="smoothTransition" type="boolean">
+            <label>Smooth Fade/Transition</label>
+            <default>true</default>
+            <description>Enable or disable software controlled smooth fading/transitioning.</description>
+        </parameter>
+	</config-description>
+
+</config-description:config-descriptions>

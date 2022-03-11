@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="wifiledcontroller"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="https://openhab.org/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="https://openhab.org/schemas/thing-description/v1.0.0 https://openhab.org/schemas/thing-description-1.0.0.xsd">
+
+	<!-- Model HF-A11-ZJ370 Controller -->
+	<thing-type id="HF-A11-ZJ370">
+		<label>Wifi LED Controller Model HF-A11-ZJ370</label>
+		<description>This is the UFO Led Controller model HF-A11-ZJ370</description>
+		<channels>
+			<channel id="power" typeId="power" />
+			<channel id="color" typeId="color" />
+			<channel id="mode" typeId="mode" />
+			<channel id="speed" typeId="speed" />
+			<channel id="query" typeId="query" />
+			<channel id="preset" typeId="preset" />
+			<channel id="store" typeId="store" />
+		</channels>
+		<config-description-ref uri="thing-type:wifiledcontroller:config" />
+	</thing-type>
+
+	<!-- Model HF-LPB100-ZJ200 Controller -->
+	<thing-type id="HF-LPB100-ZJ002">
+		<label>Wifi LED Controller Model HF-LPB100-ZJ002</label>
+		<description>This is the UFO Led Controller model HF-LPB100-ZJ002</description>
+		<channels>
+			<channel id="power" typeId="power" />
+			<channel id="whiteLevel" typeId="whiteLevel" />
+			<channel id="color" typeId="color" />
+			<channel id="mode" typeId="mode" />
+			<channel id="speed" typeId="speed" />
+			<channel id="query" typeId="query" />
+			<channel id="preset" typeId="preset" />
+			<channel id="store" typeId="store" />
+		</channels>
+		<config-description-ref uri="thing-type:wifiledcontroller:config" />
+	</thing-type>
+
+	<!-- Model HF-LPB100-ZJ200 Controller -->
+	<thing-type id="HF-LPB100-ZJ200">
+		<label>Wifi LED Controller Model HF-LPB100-ZJ200</label>
+		<description>This is the UFO Led Controller model HF-LPB100-ZJ200</description>
+		<channels>
+			<channel id="power" typeId="power" />
+			<channel id="whiteLevel" typeId="whiteLevel" />
+			<channel id="color" typeId="color" />
+			<channel id="mode" typeId="mode" />
+			<channel id="speed" typeId="speed" />
+			<channel id="query" typeId="query" />
+			<channel id="preset" typeId="preset" />
+			<channel id="store" typeId="store" />
+		</channels>
+		<config-description-ref uri="thing-type:wifiledcontroller:config" />
+	</thing-type>
+
+	<thing-type id="AK001-ZJ200">
+		<label>Wifi LED Controller Model AK001-ZJ200</label>
+		<description>This is the UFO Led Controller model AK001-ZJ200</description>
+		<channels>
+			<channel id="power" typeId="system.power" />
+			<channel id="whiteLevel" typeId="whiteLevel" />
+			<channel id="color" typeId="color" />
+			<channel id="mode" typeId="mode" />
+			<channel id="speed" typeId="speed" />
+			<channel id="query" typeId="query" />
+			<channel id="preset" typeId="preset" />
+			<channel id="store" typeId="store" />
+		</channels>
+		<config-description-ref uri="thing-type:wifiledcontroller:config" />
+	</thing-type>
+
+	<!-- Power Channel Type -->
+	<channel-type id="power">
+		<item-type>Switch</item-type>
+		<!-- <kind></kind> -->
+		<label>1. Power</label>
+		<description>Power on/off for WifiLEDController Binding</description>
+		<category>Light</category>
+		<!-- <tags></tags> -->
+		<!-- <state></state> -->
+		<!-- <command></command> -->
+		<!-- <autoUpdatePolicy>default</autoUpdatePolicy> -->
+		<!-- <config-description></config-description> -->
+		<!-- <config-description-ref uri=""/> -->
+	</channel-type>
+
+	<!-- 
+	<channel-group-type id="MyGroup">
+	   <label>xxx</label>
+	   <description></description>
+	   <category></category>
+	   <channels>
+	       <channel typeId="" id=""></channel>
+	   </channels>
+    </channel-group-type>
+    -->
+    
+	<channel-type id="query">
+		<item-type>Switch</item-type>
+		<label>Query Device State</label>
+		<description>Query state from device for WifiLEDController Binding</description>
+		<category>Switch</category>
+	</channel-type>
+
+	<channel-type id="whiteLevel">
+		<item-type>Dimmer</item-type>
+		<label>White Level</label>
+		<description>Dimmer for white level</description>
+		<category>DimmableLight</category>
+	</channel-type>
+
+	<channel-type id="masterLevel">
+		<item-type>Dimmer</item-type>
+		<label>Master Level</label>
+		<description>Dimmer for all level</description>
+		<category>DimmableLight</category>
+	</channel-type>
+
+	<channel-type id="color">
+		<item-type>Color</item-type>
+		<label>Color</label>
+		<description>Color</description>
+		<category>ColorLight</category>
+	</channel-type>
+
+	<channel-type id="mode">
+		<item-type>Number</item-type>
+		<label>Mode</label>
+		<description>Mode</description>
+		<category>Light</category>
+		<state readOnly="false">
+			<options>
+				<option value="97">NONE</option>
+				<option value="37">Seven Colors Cross Fade</option>
+				<option value="38">Red Gradual Change</option>
+				<option value="39">Green Gradual Change</option>
+				<option value="40">Blue Gradual Change</option>
+				<option value="41">Yellow Gradual Change</option>
+				<option value="42">Cyan Gradual Change</option>
+				<option value="43">Purple Gradual Change</option>
+				<option value="44">White Gradual Change</option>
+				<option value="45">Red,Green Cross Fade</option>
+				<option value="46">Red, Blue Cross Fade</option>
+				<option value="47">Green, Blue Cross Fade</option>
+				<option value="48">Seven Colors Strobe Flash</option>
+				<option value="49">Red Strobe Flash</option>
+				<option value="50">Green Strobe Flash</option>
+				<option value="51">Blue Strobe Flash</option>
+				<option value="52">Yellow Strobe Flash</option>
+				<option value="53">Cyan Strobe Flash</option>
+				<option value="54">Purple Strobe Flash</option>
+				<option value="55">White Strobe Flash</option>
+				<option value="56">Seven Colors Jumping Change</option>
+			</options>
+		</state>
+	</channel-type>
+
+	<channel-type id="speed">
+		<item-type>Dimmer</item-type>
+		<label>Speed</label>
+		<description>Speed</description>
+		<category>DimmableLight</category>
+	</channel-type>
+
+	<channel-type id="preset" advanced="false">
+		<item-type>String</item-type>
+		<label>Preset</label>
+		<description>Preset</description>
+		<state readOnly="false">
+			<options>
+				<option value="-">NONE</option>
+			</options>
+		</state>
+	</channel-type>
+
+	<channel-type id="store">
+		<item-type>Switch</item-type>
+		<label>Store Color Preset</label>
+		<description>Store current RGBW settings in current preset</description>
+		<category>Switch</category>
+	</channel-type>
+
+</thing:thing-descriptions>
